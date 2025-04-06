@@ -19,6 +19,6 @@ adminRouter.put('/users/:id', ensureAuthentic, userController.update)
 adminRouter.delete('/users/:id', ensureAuthentic, ensureAdmin, userController.delete)
 
 // GET /admin/generateCard
-adminRouter.post('/generateCard', ensureAuthentic, generationCard.generateCardUser)
+adminRouter.post('/generateCard', generationCard.generateCardUser)
 
 module.exports = adminRouter

@@ -3,8 +3,8 @@ const bcrypt = require('bcrypt')
 
 // simulaçõa de um banco de dados
 let users = [
-    {id: '1', name: 'Marcos',email: 'marcos@gamil.com', role: 'admin', course: 'Ciência da Computação', semester: '5', password: '123456'},
-    {id: uuid(), name: 'Pedro',email: 'pedro@gamil.com', role: 'standard', course: 'Ciência da Computação', semester: '5',password: '123456'}
+    {id: '1', name: 'Marcos',email: 'marcos@gmail.com', role: 'admin', course: 'Ciência da Computação', semester: '5', password: '123'},
+    {id: uuid(), name: 'Pedro',email: 'pedro@gamail.com', role: 'standard', course: 'Ciência da Computação', semester: '5',password: '123456'}
 ]
 
 // métodos do usuário

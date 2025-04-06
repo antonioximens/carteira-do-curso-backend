@@ -27,7 +27,7 @@ module.exports = {
     
             // Verificar se a imagem existe antes de utilizá-la
             const fs = require("fs");
-            const imagePath = "../images/card-background.webp"
+            const imagePath = path.resolve(__dirname, "../images/card-background.webp")
             if (fs.existsSync(imagePath)) {
                 // Adicionar imagem de fundo
                 doc.image(imagePath, 0, 0, { width: 595.28, height: 841.89 }) // Dimensões A4 padrão

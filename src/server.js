@@ -1,4 +1,5 @@
 require('dotenv').config()
+const cors = require('cors')
 const express = require('express')
 const errorMiddlewares = require('./middlewares/error-middlewares')
 const authenticRouter = require('./routes/authenticRouter')
@@ -8,11 +9,17 @@ const app = express()
 
 app.use(express.json())
 
+app.use(cors()); // Permite todas as origens
+
+// Para permitir apenas uma origem específica:
+app.use(cors({ origin: "http://localhost:5173" }));
+
+
 // Rotas autenticaão
-app.use('/auth', authenticRouter)
+app.use(authenticRouter)
 
 // Rotas admin
-app.use('/admin', adminRouter)
+app.use(adminRouter)
 
 // Tratamento de erro
 app.use(errorMiddlewares)
